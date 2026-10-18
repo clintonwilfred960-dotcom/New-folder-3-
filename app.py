@@ -1,6 +1,6 @@
 import json
 import pathlib
-from flask import Flask, jsonify, send_from_directory
+from flask import Flask, jsonify, render_template, jsonify
 
 BASE = pathlib.Path(__file__).parent
 app = Flask(__name__, static_folder="static", static_url_path="")
@@ -8,7 +8,7 @@ app = Flask(__name__, static_folder="static", static_url_path="")
 
 @app.route("/")
 def home():
-    return send_from_directory(app.static_folder, "index.html")
+    return render_template("index.html")
 
 
 @app.route("/api/config")
