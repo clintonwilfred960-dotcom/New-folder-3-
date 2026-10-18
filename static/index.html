@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>A birthday surprise</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@600;800&family=Newsreader:ital,wght@1,400;1,600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<canvas id="fx"></canvas>
+
+<section class="scene on" id="s0">
+  <h1>A surprisee from Clinton to you.</h1>
+  <p>Sound on. Tap when you're ready.</p>
+  <button class="go" id="open">Open it</button>
+</section>
+
+<section class="scene" id="s1"><div class="num" id="num"></div></section>
+
+<section class="scene" id="s2">
+  <h2 id="cakeHead">Make a wish.</h2>
+  <svg id="cake" viewBox="0 0 300 280" aria-label="Birthday cake with candles">
+    <ellipse cx="150" cy="268" rx="140" ry="9" fill="#0006"/>
+    <rect x="20" y="215" width="260" height="50" rx="10" fill="#ffd27a"/>
+    <rect x="50" y="160" width="200" height="55" rx="10" fill="#fff3df"/>
+    <rect x="80" y="110" width="140" height="50" rx="10" fill="#ff6f91"/>
+    <path d="M20 228q16 14 32 0t32 0 32 0 32 0 32 0 32 0 32 0 32 0" fill="none" stroke="#ff6f91" stroke-width="6"/>
+    <path d="M50 172q16 14 32 0t32 0 32 0 32 0 32 0" fill="none" stroke="#7be0c3" stroke-width="5"/>
+    <g id="candles"></g>
+  </svg>
+  <p id="hint">Tap each flame to blow it out.</p>
+</section>
+
+<section class="scene" id="s3">
+  <h2 id="lh"></h2>
+  <p class="letter" id="letter"></p>
+  <button class="go" id="n3" hidden>Next</button>
+</section>
+
+<section class="scene" id="s4">
+  <h2>A few things worth saying</h2>
+  <div class="cards" id="cards"></div>
+  <p>Tap a card.</p>
+  <button class="go" id="n4">One last thing</button>
+</section>
+
+<section class="scene" id="s5">
+  <h1 class="big" id="fin"></h1>
+  <p class="sub" id="sig"></p>
+  <button class="go" id="again">Watch again</button>
+</section>
+
+<script src="script.js"></script>
+</body>
+</html>
